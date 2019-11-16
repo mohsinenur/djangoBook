@@ -1,0 +1,17 @@
+<h1 *ngIf="counter > 1">{{ title }}</h1>
+<!-- <p>{{ counter }}</p>
+<input type="text" name="" id="" [(ngModel)]="title">
+<button (click)="onClick()" >Click Me</button>
+<button (click)="title='Mohsin'" >Change</button>
+
+<div *ngFor="let people of peoples">
+    <h4>{{ people }}</h4>
+</div>
+
+<h2>{{ cash | currency:"Tk " }}</h2> -->
+<nav>
+    <a routerLink="first">Firts</a><br>
+    <a routerLink="second/{{ counter }}">Second</a>
+</nav>
+
+<router-outlet></router-outlet>
