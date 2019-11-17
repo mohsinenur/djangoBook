@@ -1,0 +1,12 @@
+#Create Project: ng new project-name
+#Run Project: ng serve --open
+#Generate Module: ng g m auth
+#Generate Component: ng g c auth --m=auth
+#ony way data binding: (click)="onClick()"
+#Two way data binding: [(ngModel)]="name" (you have to import FormsModule in module file)
+#OnInit for initiate a component data
+#service: ng g s People, import in component and create constractor to use, also import in module
+#pipe
+#route module: ng g m app-route --flat --m=app
+#location back
+#data from parent to child: @Input() animal: string;
