@@ -1,0 +1,7 @@
+<form [formGroup]="movieForm" (submit)="saveForm()">
+    <label>Title</label><br>
+    <input type="text" formControlName="title"><br>
+    <label>Description</label><br>
+    <textarea id="" cols="30" rows="10" formControlName="description"></textarea><br>
+    <button type="submit">Save</button>
+</form>
