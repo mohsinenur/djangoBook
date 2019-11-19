@@ -4,3 +4,16 @@
     height: calc(100vh - 100px);
     padding: 50px;
 }
+
+h1 {
+    text-align: center;
+    color: orange;
+    font-size: 3em;
+}
+
+h1 fa {
+    color: white;
+    display: inline-block;
+    transform: rotate(30deg);
+    margin-right: 15px;
+}
