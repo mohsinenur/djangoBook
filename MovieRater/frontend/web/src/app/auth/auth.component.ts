@@ -17,6 +17,8 @@ interface TokenObj {
 
 export class AuthComponent implements OnInit {
 
+  registerTrue = false;
+
   loginForm = new FormGroup({
     username: new FormControl(),
     password: new FormControl()
@@ -36,14 +38,26 @@ export class AuthComponent implements OnInit {
   }
 
   saveForm(){
+    if(!this.registerTrue){
+      this.login();
+    }else{
+      this.apiService.registerUser(this.loginForm.value).subscribe(
+        result => {
+          this.login();
+        },
+        error => console.log(error)
+      );
+    }
+  }
+
+  login() {
     this.apiService.loginUser(this.loginForm.value).subscribe(
       (result: TokenObj) => {
         this.cookieService.set('mr-token', result.token);
         this.router.navigate(['movies']);
       },
       error => console.log(error)
-      
-    )
+    );
   }
 
 }
