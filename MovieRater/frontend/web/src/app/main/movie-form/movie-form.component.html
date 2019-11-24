@@ -3,5 +3,8 @@
     <input type="text" formControlName="title"><br>
     <label>Description</label><br>
     <textarea id="" cols="30" rows="10" formControlName="description"></textarea><br>
-    <button type="submit">Save</button>
+    <button type="submit" [disabled]="formDisabled()">
+        <span *ngIf="id">Update</span>
+        <span *ngIf="!id">Create</span>
+    </button>
 </form>

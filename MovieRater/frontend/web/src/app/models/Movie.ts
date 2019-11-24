@@ -5,3 +5,4 @@ export interface Movie {
     avg_rating: number,
     no_of_ratings: number
 }
+

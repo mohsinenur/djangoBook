@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from "@angular/router";
 import { AuthComponent } from './auth.component';
+import { ReactiveFormsModule } from "@angular/forms";
+import { CookieService } from 'ngx-cookie-service';
 
 const routes: Routes = [
   {path: "auth", component: AuthComponent}
@@ -11,10 +13,14 @@ const routes: Routes = [
   declarations: [AuthComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ReactiveFormsModule
   ],
   exports: [
     RouterModule
-  ]
+  ],
+  providers: [
+    CookieService
+  ],
 })
 export class AuthModule { }

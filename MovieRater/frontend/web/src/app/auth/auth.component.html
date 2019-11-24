@@ -1,1 +1,11 @@
-<p>auth works!</p>
+<form [formGroup]="loginForm" (submit)="saveForm()">
+    <label>Username</label><br>
+    <input type="text" formControlName="username"><br>
+    <label>Passwore</label><br>
+    <input type="password" formControlName="password" /><br>
+    <button type="submit" *ngIf="!registerTrue">Login</button>
+    <button type="submit" *ngIf="registerTrue == true">Register</button>
+</form><br>
+
+<span *ngIf="!registerTrue" (click)="registerTrue=true">No account? Register here...</span>
+<span *ngIf="registerTrue" (click)="registerTrue=false">Have account? Login here...</span>
